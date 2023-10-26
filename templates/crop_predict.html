@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.6.8, mobirise.com">
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image:src" content="">
+  <meta property="og:image" content="">
+  <meta name="twitter:title" content="forecast">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="/static/assets/images/mbr-81x62.png" type="image/x-icon">
+  <meta name="description" content="">
+
+  <title>Recommend</title>
+  <link rel="stylesheet" href="/static/assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="/static/assets/animatecss/animate.css">
+  <link rel="stylesheet" href="/static/assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="/static/assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="/static/assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="/static/assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="/static/assets/mobirise/css/mbr-additional.css" type="text/css">
+<style>
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<head>
+<style>
+input {
+  display: inline-block;
+  /* float: inline-start; */
+  text-align: center;
+}
+</style>
+</head>
+
+<body>
+
+  <section data-bs-version="5.1" class="menu cid-s48OLK6784" once="menu" id="menu1-12">
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="#">
+                        <img src="/static/assets/images/mbr-81x62.png" alt="Mobirise Website Builder" style="height: 4.1rem;">
+                    </a>
+                </span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-primary display-5" href="">Farmoscope</a></span>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black display-4" href="https://mobirise.com">Recommend</a></li></ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+</section>
+
+
+<div style="color:red;font-size: larger;padding-top:3%;padding-left: 5%;">
+    <b> {{ prediction_text }}<b>
+</div>
+
+    <form action="{{ url_for('predict')}}"method="post" style="padding-left:5%;padding-right:5%;padding-top: 3%;">
+        <div class="form-group row">
+            <label  for="Temperature" class="col-sm-2 col-form-label"><b>Temperature:</b></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="Temperature" placeholder="Enter in degree celsius" required="required" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label  for="Humidity" class="col-sm-2 col-form-label"><b>Humidity:</b></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="Humidity" placeholder="Enter in %" required="required" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label  for="PH" class="col-sm-2 col-form-label"><b>PH:</b></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="PH" placeholder="Enter the value" required="required" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label  for="rain_fall" class="col-sm-2 col-form-label"><b>Rain Fall:</b></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="rain_fall" placeholder="Enter in mm" required="required" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label  for="k" class="col-sm-2 col-form-label"><b>Potassium (K) in the Soil:</b></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="k" placeholder="Enter the value" required="required" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label  for="n" class="col-sm-2 col-form-label"><b>Nitrogen (N) in the Soil:</b></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="n" placeholder="Enter the value" required="required" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="p" class="col-sm-2 col-form-label"><b>Phosphorous (P) in the Soil:</b></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="p" placeholder="Enter the value" required="required" />
+            </div>
+        </div>
+		<button class="button"><b>Predict</b></button>
+    </form>
+
+
+ </div>
+
+ <section data-bs-version="5.1" class="footer3 cid-t7RIoWWFJY" once="footers" id="footer3-13">
+
+
+
+
+
+  <div class="container">
+      <div class="media-container-row align-center mbr-white">
+          <div class="row row-links">
+              <ul class="foot-menu">
+
+
+
+
+
+              <li class="foot-menu-item mbr-fonts-style display-7">
+                      <a class="text-white" href="#" target="_blank">About us</a>
+                  </li><li class="foot-menu-item mbr-fonts-style display-7">
+                      <a class="text-white" href="#" target="_blank">Services</a>
+                  </li><li class="foot-menu-item mbr-fonts-style display-7">
+                      <a class="text-white" href="#" target="_blank">Contact Us</a>
+                  </li><li class="foot-menu-item mbr-fonts-style display-7"></li><li class="foot-menu-item mbr-fonts-style display-7"></li></ul>
+          </div>
+          <div class="row social-row">
+              <div class="social-list align-right pb-2">
+
+
+
+
+
+
+              <div class="soc-item">
+                      <a href="https://twitter.com/mobirise" target="_blank">
+                          <span class="socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
+                      </a>
+                  </div><div class="soc-item">
+                      <a href="https://www.github.com/SurbhiP12" target="_blank">
+                          <span class="socicon-github socicon mbr-iconfont mbr-iconfont-social"></span>
+                      </a>
+                  </div><div class="soc-item">
+                      <a href="https://www.linkedin.com/in/sana-naz-2a8386220" target="_blank">
+                          <span class="socicon-linkedin socicon mbr-iconfont mbr-iconfont-social"></span>
+                      </a>
+                  </div><div class="soc-item">
+                      <a href="https://www.instagram.com/anupriya_2282/" target="_blank">
+                          <span class="socicon-instagram socicon mbr-iconfont mbr-iconfont-social"></span>
+                      </a></div>
+          </div>
+          <div class="row row-copirayt">
+              <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">
+                  © Copyright 2023 Farmoscope. All Rights Reserved.
+              </p>
+          </div>
+      </div>
+  </div>
+</section><section><a href="https://mobiri.se/2790652" style="flex: 1 1;position: absolute;width: 100%;z-index: 1;"></a><a style="z-index:1" href="https://mobirise.com/website-design-software.html"></a></section><script src="/static/assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="/static/assets/smoothscroll/smooth-scroll.js"></script>  <script src="/static/assets/ytplayer/index.js"></script>  <script src="/static/assets/dropdown/js/navbar-dropdown.js"></script>  <script src="/static/assets/theme/js/script.js"></script>
+
+
+<input name="animation" type="hidden">
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Site made with Mobirise Website Builder v5.6.8, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.6.8, mobirise.com">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image:src" content="">
+  <meta property="og:image" content="">
+  <meta name="twitter:title" content="forecast">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="/static/assets/images/mbr-81x62.png" type="image/x-icon">
+  <meta name="description" content="">
+
+
+  <title>Commodity</title>
+  <link rel="stylesheet" href="/static/assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="/static/assets/animatecss/animate.css">
+  <link rel="stylesheet" href="/static/assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="/static/assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="/static/assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="/static/assets/mobirise/css/mbr-additional.css">
+  <link rel="stylesheet" href="/static/assets/mobirise/css/mbr-additional.css" type="text/css">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+  <!-- g fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <style>
+      body {
+          font-family: 'Ubuntu', sans-serif !important;
+      }
+
+      span,
+      img {
+          vertical-align: middle;
+          text-align: center;
+          font-weight: bold;
+      }
+
+      .ft {
+          margin-bottom: -10%;
+      }
+      .header{
+        background-color: #e43f3f;
+      }
+      div.main {
+          padding: 5px 50px 75px 50px;
+      }
+
+      th {
+          background-color: #36304a;
+          color: #fff;
+      }
+      .arr{
+        width:6% !important;
+        margin-left: 6%; */
+      }
+      .cimg{
+        width: 55% !important;
+        margin-left: 70%;
+        padding-top: 5%;
+      }
+      .bf{
+          background-color: #36304a;
+      }
+      .cf{
+        margin: 0 15% !important;
+      }
+  </style>
+</head>
+<body >
+  <<section data-bs-version="5.1" class="menu cid-s48OLK6784" once="menu" id="menu1-12">
+
+      <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+          <div class="container-fluid">
+              <div class="navbar-brand">
+                  <span class="navbar-logo">
+                      <a href="#">
+                          <img src="/static/assets/images/mbr-81x62.png" alt="Mobirise Website Builder" style="height: 4.1rem;">
+                      </a>
+                  </span>
+                  <span class="navbar-caption-wrap"><a class="navbar-caption text-primary display-5" href="">Farmoscope</a></span>
+              </div>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+                      <li class="nav-item"><a class="nav-link link text-black display-4" href="https://mobirise.com">Recommend</a></li>
+                  </ul>
+
+
+              </div>
+          </div>
+      </nav>
+
+  </section>
+
+  <div class="container-fluid">
+
+    <h3 class="header " style="text-align:center;">{{context.name}}</h3>
+    <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+      <div class="card horizontal medium">
+        <div class="card-image">
+          <img class="cimg" src={{context.image_url}}>
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <table>
+              <tr>
+                <td>Current Price</td>
+                <td><b>₹ {{context.current_price}} / ql</b></td>
+              </tr>
+              <tr>
+                <td>Prime Location</td>
+                <td><b>{{context.prime_loc}}</b></td>
+              </tr>
+              <tr>
+                <td>Crop Type</td>
+                <td><b>{{context.type_c}}</b></td>
+              </tr>
+              <tr>
+                <td>Export</td>
+                <td><b>{{context.export}}</b></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6 col-md-12 col-sm-12">
+      <div class="card  lighten-3">
+        <div class="card-content black-text">
+            <span >Brief Forecast</span>
+          <table>
+            <tr>
+              <td><p>Min. crop price time</p>
+              <td><h5>{{context.min_crop[0]}}</h5></td>
+              <td>
+                <h4>₹{{context.min_crop[1]}}</h4>
+              </td>
+            </tr>
+            <tr>
+              <td><p>Max. crop price time</p>
+              <td><h5>{{context.max_crop[0]}}</h5></td>
+              <td>
+                <h4>₹{{context.max_crop[1]}}</h4>
+              </td>
+            </tr>
+          </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+  </div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col s4">
+      <h5 style="text-align:center;">Forecast Trends</h5>
+     <table class="striped">
+        <thead>
+          <tr>
+              <th>Month</th>
+              <th>Price (per Qtl.)</th>
+              <th>Change</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        {% for item in context.forecast_values %}
+          <tr>
+            <td>{{item[0]}}</td>
+            <td>₹{{item[1]}}</td>
+            <td class="valign-wrapper">{{item[2]}}% {% if item[2]>=0 %}<img class="arr" src= "../static/gain-icon.png" >{% else %}<img  class="arr" src= "../static/loss-icon.png">{% endif %}</td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+</div>
+</div>
+<div class="container">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+
+    <div class="chartjs-wrapper col s7 offset-s1">
+    <canvas id="chartjs-0" class="chartjs" width="undefined" height="undefined" style=" width:800px !important;
+  height:400px !important;">
+    </canvas>
+  <script>
+    new Chart(
+    document.getElementById("chartjs-0"),{"type":"line","data":{"labels":{{context.forecast_x|safe}},"datasets":[{"label":"Next year Price","data":{{context.forecast_y}},"fill":false,"borderColor":"rgb(125, 0, 0)","lineTension":0.1}]},"options":{ responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+        yAxes: [{
+            display: true,
+            ticks: {
+                suggestedMin: 1000,
+                stepSize : 200
+            }
+        }]
+    }}});</script>
+  </div>
+  <div class="chartjs-wrapper col s7 offset-s1">
+    <canvas id="chartjs-1" class="chartjs" width="undefined" height="undefined" style=" width:800px !important;
+  height:400px !important;">
+    </canvas>
+  <script>
+    new Chart(document.getElementById("chartjs-1"),{"type":"line","data":{"labels":{{context.previous_x|safe}},"datasets":[{"label":"Previous year price","data":{{context.previous_y}},"fill":false,"borderColor":"rgb(125, 0, 0)","lineTension":0.1}]},"options":{ responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+        yAxes: [{
+            display : true,
+            ticks: {
+                suggestedMin : 1000,
+                stepSize : 200
+            }
+        }]
+    }}});</script>
+  </div>
+  </div>
+
+
+</script>
+</div>
+<!-- footer -->
+
+<section data-bs-version="5.1" class="gallery5 mbr-gallery cid-t7TTmFitno" id="gallery5-18" style="padding-bottom:0">
+
+    <section data-bs-version="5.1" class="footer3 cid-t7RIoWWFJY" once="footers" id="footer3-13">
+
+
+
+
+
+        <div class="container">
+            <div class="media-container-row align-center mbr-white">
+                <div class="row row-links">
+                    <ul class="foot-menu">
+
+
+
+
+
+                        <li class="foot-menu-item mbr-fonts-style display-7">
+                            <a class="text-white" href="#" target="_blank">About us</a>
+                        </li>
+                        <li class="foot-menu-item mbr-fonts-style display-7">
+                            <a class="text-white" href="#" target="_blank">Services</a>
+                        </li>
+                        <li class="foot-menu-item mbr-fonts-style display-7">
+                            <a class="text-white" href="#" target="_blank">Contact Us</a>
+                        </li>
+                        <li class="foot-menu-item mbr-fonts-style display-7"></li>
+                        <li class="foot-menu-item mbr-fonts-style display-7"></li>
+                    </ul>
+                </div>
+                <div class="row social-row">
+                    <div class="social-list align-right pb-2">
+
+
+
+
+
+
+                        <div class="soc-item">
+                            <a href="https://twitter.com/mobirise" target="_blank">
+                                <span class="socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.github.com/SurbhiP12" target="_blank">
+                                <span class="socicon-github socicon mbr-iconfont mbr-iconfont-social"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.linkedin.com/in/sana-naz-2a8386220" target="_blank">
+                                <span class="socicon-linkedin socicon mbr-iconfont mbr-iconfont-social"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.instagram.com/anupriya_2282/" target="_blank">
+                                <span class="socicon-instagram socicon mbr-iconfont mbr-iconfont-social"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-copirayt">
+                    <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">
+                        © Copyright 2023 Farmoscope. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <a href="https://mobiri.se/2790652" style="flex: 1 1;position: absolute;width: 100%;z-index: 1;"></a>
+        <a style="z-index:1" href="https://mobirise.com/website-design-software.html"></a>
+    </section>
+    <script src="/static/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/assets/smoothscroll/smooth-scroll.js"></script>
+    <script src="/static/assets/ytplayer/index.js"></script>
+    <script src="/static/assets/dropdown/js/navbar-dropdown.js"></script>
+    <script src="/static/assets/theme/js/script.js"></script>
+
+    <input name="animation" type="hidden">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>

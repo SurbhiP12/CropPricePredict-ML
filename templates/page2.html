@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  <!-- Site made with Mobirise Website Builder v5.6.8, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.6.8, mobirise.com">
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image:src" content="">
+  <meta property="og:image" content="">
+  <meta name="twitter:title" content="forecast">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="/static/assets/images/mbr-81x62.png" type="image/x-icon">
+  <meta name="description" content="">
+
+
+  <title>forecast</title>
+  <link rel="stylesheet" href="/static/assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="/static/assets/animatecss/animate.css">
+  <link rel="stylesheet" href="/static/assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="/static/assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="/static/assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="/static/assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="/static/assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- g fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <style>
+    body {
+        font-family: 'Ubuntu', sans-serif !important;
+    }
+
+    div.main {
+        padding: 5px 50px 75px 50px;
+    }
+
+    span,
+    img {
+        vertical-align: middle;
+        text-align: center;
+        font-weight: bold;
+    }
+    .th1{
+        background-color: #36304a;
+
+    }
+    .star_comm{
+
+        background-color: #36304a;
+        color: #fff;
+    }
+
+    .th2{
+        background-color: #36304a;
+    }
+    th{
+        background-color:#36304a;
+        color:#fff ;
+
+    }
+    .brand-logo>span,
+    .brand-logo>img {
+        vertical-align: middle;
+    }
+    td{
+        margin-left: 20%;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+
+</head>
+<body>
+    
+  <section data-bs-version="5.1" class="menu cid-s48OLK6784" once="menu" id="menu1-12">
+
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="#">
+                        <img src="/static/assets/images/mbr-81x62.png" alt="Mobirise Website Builder" style="height: 4.1rem;">
+                    </a>
+                </span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-primary display-5" href="">Farmoscope</a></span>
+                #<button onclick="location.href='page1.html'">HOME</button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-black display-4" href="https://mobirise.com">Recommend</a></li></ul>
+
+
+            </div>
+        </div>
+    </nav>
+
+</section>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12" style="padding-top: 6%;">
+                <h4 class=" #e0f7fa cyan lighten-5" style="text-align: center;" >Top Increases</h4>
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th class="th1">Item Name</th>
+                            <th>Price (per Qtl.)</th>
+                            <th class="th2">Change</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for item in context['top5'] %}
+                        <tr>
+                            <td>{{item[0]}}</td>
+                            <td>₹{{item[1]}}</td>
+                            <td class="valign-wrapper">{{item[2]}}% <img src="../static/gain-icon.png" height="25" width="25"></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12" style="padding-top: 6%;">
+                <h4 class="#e0f7fa cyan lighten-5" style="text-align: center;" >Top Decreases</h4>
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Price (per Qtl.)</th>
+                            <th>Change</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for item in context['bottom5'] %}
+                        <tr>
+                            <td>{{item[0]}}</td>
+                            <td>₹{{item[1]}}</td>
+                            <td class="valign-wrapper">{{item[2]}}% <img src="../static/loss-icon.png" height="25" width="25"></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-4" style="padding-top: 8%;">
+                    <!-- card grey lighten-3 -->
+                    <div class="star_comm">
+                        <div class="card-content white-text">
+                            <h6 style="text-align: center; padding-top: 6%;">Star Commodity Prediction</h6>
+                            <div class="container-fluid">
+                            <span id="time">{{context.sixmonths[0][0]}}</span>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h6  id="crop1">{{context.sixmonths[0][1]}}</h6>
+                                    </td>
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                    <td class="right">
+                                        <h5 id="price1">₹{{context.sixmonths[0][2]}}</h5>
+                                        <p id="pos-change" >{{context.sixmonths[0][3]}}%</p><img id="change1" src="../static/gain-icon.png" height="20" width="20" style="margin-left: 5;"></td>
+
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h6 id="crop2">{{context.sixmonths[0][4]}}</h6>
+                                    </td>
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                    <td class="right">
+                                        <h5 id="price2">₹{{context.sixmonths[0][5]}}</h5>
+                                        <p id="neg-change" class="valign-wrapper right">{{context.sixmonths[0][6]}}%</p><img id="change2" src="../static/loss-icon.png" height="20" width="20" style="margin-left: 5;">
+                                    </td>
+                                </tr>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+                    <script>
+                        function sleep(ms) {
+                            return new Promise(resolve => setTimeout(resolve, ms));
+                        }
+
+                        function updateTime(i) {
+                            $('#time').load('http://localhost:5000/ticker/' + 0 + '/' + i);
+                        }
+
+                        function updateCrop1(i) {
+                            $('#crop1').load('http://localhost:5000/ticker/' + 1 + '/' + i);
+                        }
+
+                        function updatePrice1(i) {
+                            $('#price1').load('http://localhost:5000/ticker/' + 2 + '/' + i);
+                        }
+
+                        function updateChange1(i) {
+                            $("#change1").attr("src", "../static/gain-icon.png");
+                            $('#pos-change').load('http://localhost:5000/ticker/' + 3 + '/' + i);
+
+                        }
+
+                        function updateCrop2(i) {
+                            $('#crop2').load('http://localhost:5000/ticker/' + 4 + '/' + i);
+                        }
+
+                        function updatePrice2(i) {
+                            $('#price2').load('http://localhost:5000/ticker/' + 5 + '/' + i);
+                        }
+
+                        function updateChange2(i) {
+                            $("#change2").attr("src", "../static/loss-icon.png");
+                            $('#neg-change').load('http://localhost:5000/ticker/' + 6 + '/' + i);
+
+                        }
+                    </script>
+
+                    <script>
+                        var i = 0
+                        setInterval(async function() {
+                            i = (i + 1) % 5;
+                            updateTime(i);
+
+                            updateCrop1(i);
+                            await sleep(200);
+
+                            updatePrice1(i);
+                            await sleep(200);
+
+                            updateChange1(i);
+                            await sleep(200);
+
+                            updateCrop2(i);
+                            await sleep(200);
+
+                            updatePrice2(i);
+                            await sleep(200);
+
+                            updateChange2(i);
+                            await sleep(200);
+
+                            /*
+                            setTimeout(updateCrop1(i), 100);
+                            setTimeout(updatePrice1(i), 300);
+                            setTimeout(updateChange1(i), 500);
+                            setTimeout(updateCrop2(i), 700);
+                            setTimeout(updatePrice2(i), 800);
+                            setTimeout(updateChange2(i), 900);
+                            */
+
+                        }, 4000);
+                    </script>
+
+
+
+    <div class="align-center container">
+        <div class="row justify-content-end">
+            <div class="col-12 col-lg-6">
+                <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1"></h1>
+
+                <p class="mbr-text mbr-fonts-style display-7"></p>
+
+            </div>
+        </div>
+    </div>
+
+<section data-bs-version="5.1" class="gallery5 mbr-gallery cid-t7TTmFitno" id="gallery5-18">
+
+
+
+
+
+    <div class="container">
+        <div class="mbr-section-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center m-0 display-2"><strong>EXPLORE BY EACH CROP</strong></h3>
+
+
+        </div>
+        <div class="row mbr-gallery mt-4">
+            <div class="col-12 col-md-6 col-lg-3 item gallery-image">
+                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                    <img class="w-100" src="/static/assets/images/paddy.jpg" alt="Mobirise Website Builder" data-slide-to="0" data-bs-slide-to="0" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                    <!-- <div class="icon-wrapper">
+                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                    </div> -->
+                </div>
+                <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                 <a href="http://localhost:5000/page3/paddy" class="text-primary">Paddy</a>
+                </h6>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 item gallery-image">
+                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                    <img class="w-100" src="/static/assets/images/wheat.jpg" alt="Mobirise Website Builder" data-slide-to="1" data-bs-slide-to="1" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                    <!-- <div class="icon-wrapper">
+                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                    </div> -->
+                </div>
+                <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                    <a href="http://localhost:5000/page3/wheat" class="text-primary">Wheat</a>
+                </h6>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 item gallery-image">
+                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                    <img class="w-100" src="/static/assets/images/barley.jpg" alt="Mobirise Website Builder" data-slide-to="2" data-bs-slide-to="2" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                    <!-- <div class="icon-wrapper">
+                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                    </div> -->
+                </div>
+                <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                    <a href="http://localhost:5000/page3/barley" class="text-primary">Barley</a>
+                </h6>
+            </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
+                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                    <img class="w-100" src="/static/assets/images/soyabean.jpg" alt="Mobirise Website Builder" data-slide-to="3" data-bs-slide-to="3" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                    <!-- <div class="icon-wrapper">
+                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                    </div> -->
+                </div>
+                <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                     <a href="http://localhost:5000/page3/soyabean" class="text-primary">Soya Bean</a>
+                </h6>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 item gallery-image">
+                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                    <img class="w-100" src="/static/assets/images/coconut.jpg" alt="Mobirise Website Builder" data-slide-to="5" data-bs-slide-to="5" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                    <!-- <div class="icon-wrapper">
+                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                    </div> -->
+                </div>
+                <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                     <a href="http://localhost:5000/page3/copra" class="text-primary">Coconut</a>
+                </h6>
+            </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
+                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                    <img class="w-100" src="/static/assets/images/groundnut.jpg" alt="Mobirise Website Builder" data-slide-to="6" data-bs-slide-to="6" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                    <!-- <div class="icon-wrapper">
+                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                    </div> -->
+                </div>
+                <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                    <a href="http://localhost:5000/page3/groundnut" class="text-primary">Ground Nut Seeds</a>
+                </h6>
+            </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
+                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                    <img class="w-100" src="/static/assets/images/mustard.jpg" alt="Mobirise Website Builder" data-slide-to="7" data-bs-slide-to="7" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                    <!-- <div class="icon-wrapper">
+                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                    </div> -->
+                </div>
+                <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                     <a href="http://localhost:5000/page3/rape" class="text-primary">Mustard Seeds</a>
+                </h6>
+            </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
+                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                    <img class="w-100" src="/static/assets/images/sesame.jpg" alt="Mobirise Website Builder" data-slide-to="8" data-bs-slide-to="8" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                    <!-- <div class="icon-wrapper">
+                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                    </div> -->
+                </div>
+                <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                    <a href="http://localhost:5000/page3/sesamum" class="text-primary">Gingelly Seed(Sesamum)</a>
+                </h6>
+            </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
+                <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                    <img class="w-100" src="/static/assets/images/gram.jpg" alt="Mobirise Website Builder" data-slide-to="9" data-bs-slide-to="9" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                    <!-- <div class="icon-wrapper">
+                        <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                    </div> -->
+                </div>
+                <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                     <a href="http://localhost:5000/page3/gram" class="text-primary">Gram</a>
+                </h6>
+            </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
+            <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                <img class="w-100" src="/static/assets/images/cane.jpg" alt="Mobirise Website Builder" data-slide-to="9" data-bs-slide-to="9" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                <!-- <div class="icon-wrapper">
+                    <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                </div> -->
+            </div>
+            <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                 <a href="http://localhost:5000/page3/sugarcane" class="text-primary">Sugarcane</a>
+            </h6>
+        </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
+            <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                <img class="w-100" src="/static/assets/images/arhar.jpg" alt="Mobirise Website Builder" data-slide-to="9" data-bs-slide-to="9" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                <!-- <div class="icon-wrapper">
+                    <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                </div> -->
+            </div>
+            <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                 <a href="http://localhost:5000/page3/arhar" class="text-primary">Arhar</a>
+            </h6>
+        </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
+            <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                <img class="w-100" src="/static/assets/images/ragi.jpg" alt="Mobirise Website Builder" data-slide-to="8" data-bs-slide-to="8" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                <!-- <div class="icon-wrapper">
+                    <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                </div> -->
+            </div>
+            <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                <a href="http://localhost:5000/page3/ragi" class="text-primary">Ragi</a>
+            </h6>
+        </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
+            <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                <img class="w-100" src="/static/assets/images/maize.jpg" alt="Mobirise Website Builder" data-slide-to="9" data-bs-slide-to="9" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                <!-- <div class="icon-wrapper">
+                    <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                </div> -->
+            </div>
+            <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                 <a href="http://localhost:5000/page3/maize" class="text-primary">Maize</a>
+            </h6>
+
+        </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
+            <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                <img class="w-100" src="/static/assets/images/moong.jpg" alt="Mobirise Website Builder" data-slide-to="9" data-bs-slide-to="9" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                <!-- <div class="icon-wrapper">
+                    <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                </div> -->
+            </div>
+            <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                 <a href="http://localhost:5000/page3/moong" class="text-primary">Moong</a>
+            </h6>
+        </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
+            <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                <img class="w-100" src="/static/assets/images/masoor.jpg" alt="Mobirise Website Builder" data-slide-to="9" data-bs-slide-to="9" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                <!-- <div class="icon-wrapper">
+                    <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                </div> -->
+            </div>
+            <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                 <a href="http://localhost:5000/page3/masoor" class="text-primary">Masoor</a>
+            </h6>
+
+        </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
+            <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                <img class="w-100" src="/static/assets/images/urad.jpg" alt="Mobirise Website Builder" data-slide-to="8" data-bs-slide-to="8" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                <!-- <div class="icon-wrapper">
+                    <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                </div> -->
+            </div>
+            <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                <a href="http://localhost:5000/page3/urad" class="text-primary">Urad</a>
+            </h6>
+
+        </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
+            <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                <img class="w-100" src="/static/assets/images/jute.jpg" alt="Mobirise Website Builder" data-slide-to="9" data-bs-slide-to="9" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                <!-- <div class="icon-wrapper">
+                    <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                </div> -->
+            </div>
+            <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                 <a href="http://localhost:5000/page3/jute" class="text-primary">Raw Jute</a>
+            </h6>
+        </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
+            <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                <img class="w-100" src="/static/assets/images/niger.jpg" alt="Mobirise Website Builder" data-slide-to="9" data-bs-slide-to="9" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                <!-- <div class="icon-wrapper">
+                    <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                </div> -->
+            </div>
+            <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                 <a href="http://localhost:5000/page3/niger" class="text-primary">Niger Seed</a>
+            </h6>
+        </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
+            <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                <img class="w-100" src="/static/assets/images/kardi.jpg" alt="Mobirise Website Builder" data-slide-to="9" data-bs-slide-to="9" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                <!-- <div class="icon-wrapper">
+                    <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                </div> -->
+            </div>
+            <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                 <a href="http://localhost:5000/page3/safflower" class="text-primary">Kardi Seed</a>
+            </h6>
+        </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
+            <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                <img class="w-100" src="/static/assets/images/sunflower.jpg" alt="Mobirise Website Builder" data-slide-to="9" data-bs-slide-to="9" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                <!-- <div class="icon-wrapper">
+                    <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                </div> -->
+            </div>
+            <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                 <a href="http://localhost:5000/page3/sunflower" class="text-primary">Sun Flower</a>
+            </h6>
+        </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
+            <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal">
+                <img class="w-100" src="/static/assets/images/jowar.jpg" alt="Mobirise Website Builder" data-slide-to="9" data-bs-slide-to="9" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx">
+                <!-- <div class="icon-wrapper">
+                    <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                </div> -->
+            </div>
+            <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                 <a href="http://localhost:5000/page3/jowar" class="text-primary">Jowar</a>
+            </h6>
+        </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
+
+            <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#t7TWcNGDBx-modal" data-bs-target="#t7TWcNGDBx-modal" >
+
+                <img class="w-100" src="/static/assets/images/bajra.jpg" alt="Mobirise Website Builder"  data-slide-to="9" data-bs-slide-to="9" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx" >
+                <!-- <div class="icon-wrapper">
+                     <span class="mobi-mbri mobi-mbri-search mbr-iconfont mbr-iconfont-btn"></span>
+                </div> -->
+            </div>
+            <h6 class="mbr-item-subtitle mbr-fonts-style align-center mb-2 mt-2 display-7">
+                 <a href="http://localhost:5000/page3/bajra" class="text-primary">Bajra</a>
+            </h6>
+
+
+<!--
+        <div class="modal mbr-slider" tabindex="-1" role="dialog" aria-hidden="true" id="t7TWcNGDBx-modal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="carousel slide" id="lb-t7TWcNGDBx" data-interval="5000" data-bs-interval="5000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="/static/assets/images/features1.jpg" alt="Mobirise Website Builder">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="/static/assets/images/features2.jpg" alt="Mobirise Website Builder">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="/static/assets/images/features3.jpg" alt="Mobirise Website Builder">
+                                </div><div class="carousel-item">
+                                    <img class="d-block w-100" src="/static/assets/images/mbr-1-1920x1280.jpg" alt="Mobirise Website Builder">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="/static/assets/images/features4.jpg" alt="Mobirise Website Builder">
+                                </div><div class="carousel-item">
+                                    <img class="d-block w-100" src="/static/assets/images/mbr-1682x1920.png" alt="Mobirise Website Builder">
+                                </div><div class="carousel-item">
+                                    <img class="d-block w-100" src="/static/assets/images/mbr-1920x822.jpg" alt="Mobirise Website Builder">
+                                </div><div class="carousel-item">
+                                    <img class="d-block w-100" src="/static/assets/images/mbr-1920x1920.png" alt="Mobirise Website Builder">
+                                </div><div class="carousel-item">
+                                    <img class="d-block w-100" src="/static/assets/images/mbr-2-1920x1280.jpg" alt="Mobirise Website Builder">
+                                </div><div class="carousel-item">
+                                    <img class="d-block w-100" src="/static/assets/images/mbr-1920x1285.jpg" alt="Mobirise Website Builder">
+                                </div>
+                            </div>
+                            <ol class="carousel-indicators">
+                                <li data-slide-to="0" data-bs-slide-to="0" class="active" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx"></li>
+                                <li data-slide-to="1" data-bs-slide-to="1" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx"></li>
+                                <li data-slide-to="2" data-bs-slide-to="2" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx"></li><li data-slide-to="3" data-bs-slide-to="3" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx"></li>
+                                <li data-slide-to="4" data-bs-slide-to="4" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx"></li><li data-slide-to="5" data-bs-slide-to="5" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx"></li><li data-slide-to="6" data-bs-slide-to="6" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx"></li><li data-slide-to="7" data-bs-slide-to="7" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx"></li><li data-slide-to="8" data-bs-slide-to="8" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx"></li><li data-slide-to="9" data-bs-slide-to="9" data-target="#lb-t7TWcNGDBx" data-bs-target="#lb-t7TWcNGDBx"></li>
+                            </ol>
+                            <a role="button" href="" class="close" data-dismiss="modal" data-bs-dismiss="modal" aria-label="Close">
+                            </a>
+                            <a class="carousel-control-prev carousel-control" role="button" data-slide="prev" data-bs-slide="prev" href="#lb-t7TWcNGDBx">
+                                <span class="mobi-mbri mobi-mbri-arrow-prev" aria-hidden="true"></span>
+                                <span class="sr-only visually-hidden">Previous</span>
+                            </a>
+                            <a class="carousel-control-next carousel-control" role="button" data-slide="next" data-bs-slide="next" href="#lb-t7TWcNGDBx">
+                                <span class="mobi-mbri mobi-mbri-arrow-next" aria-hidden="true"></span>
+                                <span class="sr-only visually-hidden">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</section>
+
+<section data-bs-version="5.1" class="footer3 cid-t7RIoWWFJY" once="footers" id="footer3-13">
+
+
+
+
+
+    <div class="container">
+        <div class="media-container-row align-center mbr-white">
+            <div class="row row-links">
+                <ul class="foot-menu">
+
+
+
+
+
+                <li class="foot-menu-item mbr-fonts-style display-7">
+                        <a class="text-white" href="#" target="_blank">About us</a>
+                    </li><li class="foot-menu-item mbr-fonts-style display-7">
+                        <a class="text-white" href="#" target="_blank">Services</a>
+                    </li><li class="foot-menu-item mbr-fonts-style display-7">
+                        <a class="text-white" href="#" target="_blank">Contact Us</a>
+                    </li><li class="foot-menu-item mbr-fonts-style display-7"></li><li class="foot-menu-item mbr-fonts-style display-7"></li></ul>
+            </div>
+            <div class="row social-row">
+                <div class="social-list align-right pb-2">
+
+
+
+
+
+
+                <div class="soc-item">
+                        <a href="https://twitter.com/mobirise" target="_blank">
+                            <span class="socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
+                        </a>
+                    </div><div class="soc-item">
+                        <a href="https://www.github.com/SurbhiP12" target="_blank">
+                            <span class="socicon-github socicon mbr-iconfont mbr-iconfont-social"></span>
+                        </a>
+                    </div><div class="soc-item">
+                        <a href="https://www.linkedin.com/in/sana-naz-2a8386220" target="_blank">
+                            <span class="socicon-linkedin socicon mbr-iconfont mbr-iconfont-social"></span>
+                        </a>
+                    </div><div class="soc-item">
+                        <a href="https://www.instagram.com/anupriya_2282/" target="_blank">
+                            <span class="socicon-instagram socicon mbr-iconfont mbr-iconfont-social"></span>
+                        </a>
+                    </div></div>
+            </div>
+            <div class="row row-copirayt">
+                <p class="mbr-text mb-0 mbr-fonts-style mbr-white align-center display-7">
+                    © Copyright 2023 Farmoscope. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </div>
+</section><section><a href="https://mobiri.se/2790652" style="flex: 1 1;position: absolute;width: 100%;z-index: 1;"></a><a style="z-index:1" href="https://mobirise.com/website-design-software.html"></a></section><script src="/static/assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="/static/assets/smoothscroll/smooth-scroll.js"></script>  <script src="/static/assets/ytplayer/index.js"></script>  <script src="/static/assets/dropdown/js/navbar-dropdown.js"></script>  <script src="/static/assets/theme/js/script.js"></script>
+
+
+  <input name="animation" type="hidden">
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</html>
