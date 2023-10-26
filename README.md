@@ -21,18 +21,18 @@
 ## Installation Guide
 To install and run this webapp, you will need [Python(3.0 or above)](https://www.python.org/), and [pip](https://pypi.org/project/pip/) installed on your system
 ```sh
-$ git clone https://github.com/rahuldkjain/Crop_Prediction.git
+$ git clone https://github.com/SurbhiP12/CropPricePredict-ML.git
 $ cd Crop_Prediction
 $ pip install -r requirements.txt
 $ python app.py
 ```
 
 ## Screenshots
-[![ApnaAnaaj](https://github.com/rahuldkjain/Crop_Prediction/blob/master/static/Screenshot%20(23).png)](https://github.com/rahuldkjain/Crop_Prediction)
-[![ApnaAnaaj](https://github.com/rahuldkjain/Crop_Prediction/blob/master/static/Screenshot%20(24).png)](https://github.com/rahuldkjain/Crop_Prediction)
-[![ApnaAnaaj](https://github.com/rahuldkjain/Crop_Prediction/blob/master/static/Screenshot%20(25).png)](https://github.com/rahuldkjain/Crop_Prediction)
-[![ApnaAnaaj](https://github.com/rahuldkjain/Crop_Prediction/blob/master/static/Screenshot%20(26).png)](https://github.com/rahuldkjain/Crop_Prediction)
-[![ApnaAnaaj](https://github.com/rahuldkjain/Crop_Prediction/blob/master/static/Screenshot%20(27).png)](https://github.com/rahuldkjain/Crop_Prediction)
+[![ApnaAnaaj](https://github.com/SurbhiP12/CropPricePredict-ML/blob/master/static/images/homepage.png)](https://github.com/SurbhiP12/CropPricePredict-ML)
+[![ApnaAnaaj](https://github.com/SurbhiP12/CropPricePredict-ML/blob/master/static/images/services.png)](https://github.com/SurbhiP12/CropPricePredict-ML)
+[![ApnaAnaaj](https://github.com/SurbhiP12/CropPricePredict-ML/blob/master/static/images/predicta.png)](https://github.com/SurbhiP12/CropPricePredict-ML)
+[![ApnaAnaaj](https://github.com/SurbhiP12/CropPricePredict-ML/blob/master/static/images/predictb.png)](https://github.com/SurbhiP12/CropPricePredict-ML)
+[![ApnaAnaaj](https://github.com/SurbhiP12/CropPricePredict-ML/blob/master/static/images/predictc.png)](https://github.com/SurbhiP12/CropPricePredict-ML)
 
 ## Designed & Developed with :sparkling_heart: by
 * [Surbhi Priya]
